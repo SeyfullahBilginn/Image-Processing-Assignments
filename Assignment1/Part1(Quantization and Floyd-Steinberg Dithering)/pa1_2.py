@@ -28,13 +28,7 @@ def FloydSteingberg(image,q):
             pixel[x][y + 1] = pixel[x][y + 1] + quant_error * 5 / 16
             pixel[x + 1][y + 1] = pixel[x + 1][y + 1] + quant_error * 1 / 16
 
-    # save image if u want
+    # save image
     path = './images/Floyd-Steinberg-' + str(q) + ".jpg"
     cv2.imwrite(path ,pixel)
 
-    # show FloydSteingberg dithered Image
-    # cv2.imshow("pixel", pixel)
-
-    # cv2.waitKey(0)
-    # Destroying present windows on screen
-    # cv2.destroyAllWindows()
